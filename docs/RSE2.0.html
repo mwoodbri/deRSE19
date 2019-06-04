@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Mark Woodbridge, Imperial College London">
+  <title>RSE 2.0</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <style>.reveal blockquote { width: 90% }</style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">RSE 2.0</h1>
+  <p class="author">Mark Woodbridge, Imperial College London</p>
+  <p class="date">deRSE19 – Potsdam – 6 June 2019</p>
+</section>
+
+<section id="introduction" class="slide level2">
+<h2>Introduction</h2>
+<ul>
+<li>I lead the RSE team at Imperial College London</li>
+<li>I have previously been a Computer Scientist, software engineer and bioinformatician</li>
+<li>I starting working as an RSE ~17 years ago</li>
+</ul>
+</section>
+<section id="purpose-of-this-talk" class="slide level2">
+<h2>Purpose of this talk</h2>
+<div>
+<ul>
+<li class="fragment">RSE remains an emerging practice/role/profession</li>
+<li class="fragment">Much effort (rightly) focused on bringing software engineering best practices into research</li>
+<li class="fragment">Can we now look to the future, identify prevailing trends and prepare accordingly?</li>
+<li class="fragment">These are subjective, speculative opinions intended (only!) to foster reflection &amp; discussion</li>
+</ul>
+</div>
+</section>
+<section id="agenda" class="slide level2">
+<h2>Agenda</h2>
+<ul>
+<li>Trends
+<ul>
+<li>Technology development</li>
+<li>Software engineering</li>
+<li>Research practices</li>
+<li>Wider issues</li>
+</ul></li>
+<li>Implications
+<ul>
+<li>RSE Groups</li>
+<li>Individual RSEs</li>
+<li>Researchers, institutions and funders</li>
+</ul></li>
+<li>Conclusions</li>
+</ul>
+</section>
+<section id="trends-technology" class="slide level2">
+<h2>Trends: Technology</h2>
+<div>
+<ul>
+<li class="fragment">Disciplines, communities, languages and codes
+<ul>
+<li class="fragment">Established <em>vs</em> emerging</li>
+</ul></li>
+<li class="fragment">Infrastructure/services, use cases, funding models
+<ul>
+<li class="fragment">Legacy <em>vs</em> novel</li>
+</ul></li>
+<li class="fragment">Pace of change
+<ul>
+<li class="fragment">Compute capability/accessibility, tools</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="python-onwards-and-upwards" class="slide level2">
+<h2>Python: onwards and upwards</h2>
+<blockquote>
+<p>Python, the fastest-growing major programming language, has risen in the ranks of programming languages in our survey yet again</p>
+</blockquote>
+<p><a href="https://insights.stackoverflow.com/survey/2019">Stack Overflow Developer Survey 2019</a></p>
+</section>
+<section id="trends-software-engineering" class="slide level2">
+<h2>Trends: Software Engineering</h2>
+<div>
+<ul>
+<li class="fragment">Past: Version control</li>
+<li class="fragment">Present: Build scripts, tests, CI</li>
+<li class="fragment">Future: <a href="https://doi.org/10.5281/zenodo.1409199">Software quality assurance</a>
+<ul>
+<li class="fragment">Automate linting, testing, vuln scanning</li>
+<li class="fragment">Measure (and track) code quality, test coverage, performance, documentation…</li>
+<li class="fragment">Code quality (type hints, code suggestions…)
+<ul>
+<li class="fragment">e.g. Facebook: <a href="https://ai.facebook.com/blog/aroma-ml-for-code-recommendation/">Aroma</a> (IDE), <a href="https://code.fb.com/developer-tools/getafix-how-facebook-tools-learn-to-fix-bugs-automatically/">Getafix</a> (CI)</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="software-in-research" class="slide level2">
+<h2>Software in research</h2>
+<blockquote>
+<p>While the importance of in silico experiments for the scientific discovery process increases, state-of-the-art software engineering practices are rarely adopted in computational science</p>
+</blockquote>
+<p>Johanson and Hasselbring: <a href="https://doi.org/10.1109/MCSE.2018.108162940">Software Engineering for Computational Science: Past, Present, Future</a></p>
+</section>
+<section id="learning-based-development" class="slide level2">
+<h2>Learning-based development</h2>
+<blockquote>
+<p>This new paradigm of software creation will require a radical rethinking of the ancestral software engineering and imperative programming practices that have been developed in the second half of the last century.</p>
+</blockquote>
+<p>Erik Meijer: <a href="https://mp3indir.icu/goto-2018-machine-learning-alchemy-for-the-modern-computer-scientist-erik-meijer-mp3-indir_Rs0uRQJdIcg.html">Machine Learning: Alchemy for the Modern Computer Scientist</a></p>
+</section>
+<section id="data-driven-programming" class="slide level2">
+<h2>Data-driven programming</h2>
+<blockquote>
+<p>… our approach is to specify some goal on the behavior of a desirable program, write a rough skeleton of the code that identifies a subset of program space to search, and use the computational resources at our disposal to search this space for a program that works</p>
+</blockquote>
+<p>Andrej Karpathy: <a href="https://medium.com/@karpathy/software-2-0-a64152b37c35">Software 2.0</a></p>
+</section>
+<section id="computational-intelligence" class="slide level2">
+<h2>Computational intelligence</h2>
+<blockquote>
+<p>It’s the pattern of technology today, and it’s going to increasingly be the pattern of technology in the future: we humans define what we want to do—we set up goals—and then technology, as efficiently as possible, tries to do what we want.</p>
+</blockquote>
+<p>Stephan Wolfram: <a href="https://blogs.scientificamerican.com/observations/a-world-run-with-code/">A World Run with Code</a></p>
+</section>
+<section id="trends-research" class="slide level2">
+<h2>Trends: Research</h2>
+<div>
+<ul>
+<li class="fragment">Data-driven: plan, perform and analyse
+<ul>
+<li class="fragment">Daphne Ezer and Kirstie Whitaker: <a href="https://doi.org/10.7554/eLife.43979">Data science for the scientific life cycle</a></li>
+</ul></li>
+<li class="fragment">Interdisciplinary: common infrastructure, workspace, framework</li>
+<li class="fragment">Collaborative: distributed research, data gathering and software development</li>
+<li class="fragment">Integrity: repeatability and reproducibility</li>
+</ul>
+</div>
+</section>
+<section id="trends-general" class="slide level2">
+<h2>Trends: General</h2>
+<div>
+<ul>
+<li class="fragment">Quantified impact</li>
+<li class="fragment">Skills gap (acquired vs required)</li>
+<li class="fragment">Expectations of usability/a11y/security/privacy</li>
+<li class="fragment">Growth in industrial research</li>
+<li class="fragment">Recognition of role, influence beyond research</li>
+<li class="fragment">Appreciation that diversity can improve outcomes</li>
+</ul>
+</div>
+</section>
+<section id="implications-rse-groups-1" class="slide level2">
+<h2>Implications: RSE groups (1)</h2>
+<div>
+<ul>
+<li class="fragment">Broader services
+<ul>
+<li class="fragment">UCL-RITS <a href="https://www.ucl.ac.uk/isd/news/2018/sep/ai-studio-ucl-rits">AI Studio</a>: “consultancy service in artificial intelligence (AI) and data science”</li>
+</ul></li>
+<li class="fragment">Infrastructure: CI, GPUs, notebooks, storage</li>
+<li class="fragment">Scalable activities
+<ul>
+<li class="fragment">Less pairing and “product development”</li>
+<li class="fragment">More resources, exemplars, training, community building, self-service…</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="implications-rse-groups-2" class="slide level2">
+<h2>Implications: RSE groups (2)</h2>
+<div>
+<ul>
+<li class="fragment">Quantify impact/benefits
+<ul>
+<li class="fragment">HPC utilisation, source control adoption, reproducibility, code citations…</li>
+</ul></li>
+<li class="fragment">Allocate (more) staff time for L&amp;D, prototyping</li>
+<li class="fragment">(Re)structure groups appropriately
+<ul>
+<li class="fragment">Daniel Katz et al: <a href="https://arxiv.org/abs/1903.00732">Research Software Development &amp; Management in Universities</a></li>
+</ul></li>
+<li class="fragment">Produce less code, do more <a href="http://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/">code</a> <a href="https://reside-ic.github.io/articles/pull-requests/">reviews</a></li>
+</ul>
+</div>
+</section>
+<section id="sldc-and-technical-debt" class="slide level2">
+<h2>SLDC and technical debt</h2>
+<blockquote>
+<p>However, the code itself is not intrinsically valuable except as tool to accomplish some goal. Meanwhile, code has ongoing costs. You have to understand it, you have to maintain it, you have to adapt it to new goals over time. The more code you have, the larger those ongoing costs will be.</p>
+</blockquote>
+<p>Eric Lee: <a href="https://saintgimp.org/2009/03/11/source-code-is-a-liability-not-an-asset/">Source Code Is A Liability, Not An Asset</a></p>
+</section>
+<section id="implications-rses-1" class="slide level2">
+<h2>Implications: RSEs (1)</h2>
+<div>
+<ul>
+<li class="fragment">Be prepared for <em>continuous</em> learning</li>
+<li class="fragment">Consider specialisation
+<ul>
+<li class="fragment">Role, discipline, domain and/or technology</li>
+</ul></li>
+<li class="fragment">Seek a mentor
+<ul>
+<li class="fragment">There are more candidates than ever before!</li>
+<li class="fragment">UKRSE and deRSE can enable this</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="implications-rses-2" class="slide level2">
+<h2>Implications: RSEs (2)</h2>
+<div>
+<ul>
+<li class="fragment">Data science and/or ML will play some role in most projects
+<ul>
+<li class="fragment">Kirstie Whitaker at al: <a href="https://www.turing.ac.uk/research/research-projects/turing-way-handbook-reproducible-data-science">The Turing Way - A handbook for reproducible data science</a></li>
+<li class="fragment">Imperial College London/Coursera: <a href="https://www.coursera.org/specializations/mathematics-machine-learning">Mathematics for Machine Learning</a></li>
+<li class="fragment">Microsoft Research: <a href="https://www.microsoft.com/en-us/research/uploads/prod/2019/03/amershi-icse-2019_Software_Engineering_for_Machine_Learning.pdf">Software Engineering for Machine Learning</a></li>
+</ul></li>
+<li class="fragment">CPU/GPU/TPU, serverless, cloud</li>
+</ul>
+</div>
+</section>
+<section id="research-engineering" class="slide level2">
+<h2>Research Engineering</h2>
+<blockquote>
+<p>we have unified our Research Data Scientist and Research Software Engineer roles to a common JD … it’s all a spectrum.</p>
+</blockquote>
+<p>James Hetherington, <a href="https://twitter.com/jamespjh/status/1099068477976035328">22 February 2019</a></p>
+</section>
+<section id="implications-rses-3" class="slide level2">
+<h2>Implications: RSEs (3)</h2>
+<div>
+<ul>
+<li class="fragment">Notebooks, executable articles/code, UI frameworks
+<ul>
+<li class="fragment">Containers (Docker, Singularity?)</li>
+<li class="fragment">Automated QA, CI</li>
+<li class="fragment">Mozilla <a href="https://iodide.io">Iodide</a></li>
+<li class="fragment">eLife <a href="https://elifesciences.org/labs/7dbeb390/reproducible-document-stack-supporting-the-next-generation-research-article">reproducible documents</a></li>
+<li class="fragment">Diego Alonso Álvarez: GUIs for Python (UKRSE19)</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="webassembly" class="slide level2">
+<h2>WebAssembly</h2>
+<blockquote>
+<p>If WASM+WASI existed in 2008, we wouldn’t have needed to created Docker. That’s how important it is. Webassembly on the server is the future of computing.</p>
+</blockquote>
+<p>Solomon Hykes, <a href="https://twitter.com/solomonstre/status/1111004913222324225">27 March 2019</a></p>
+</section>
+<section id="implications-institutions" class="slide level2">
+<h2>Implications: Institutions</h2>
+<div>
+<ul>
+<li class="fragment">Foster networks
+<ul>
+<li class="fragment">Jeremy Cohen: Building Research Software Communities (deRSE19)</li>
+</ul></li>
+<li class="fragment">Provide career paths (and benefits!)
+<ul>
+<li class="fragment">James Smithies: <a href="https://www.kdl.kcl.ac.uk/blog/rse-career-development/">King’s Digital Lab Career Development</a></li>
+<li class="fragment">Recruitment challenges likely to limit growth</li>
+</ul></li>
+<li class="fragment">Provide training (early-career, knowledge gaps)</li>
+</ul>
+</div>
+</section>
+<section id="policy-conclusion-1" class="slide level2">
+<h2>Policy Conclusion (1)</h2>
+<blockquote>
+<p>Universities should also be encouraged to create more research software groups.</p>
+</blockquote>
+<p>European Commission Open Science Monitor: <a href="https://ec.europa.eu/info/files/recognising-importance-software-research-research-software-engineers-rses-uk-example_en">Recognising the Importance of Software in Research – Research Software Engineers (RSEs), a UK Example</a></p>
+</section>
+<section id="implications-funders" class="slide level2">
+<h2>Implications: Funders</h2>
+<div>
+<ul>
+<li class="fragment">Expect RSE involvement (and diversity)</li>
+<li class="fragment">Demand software management plans</li>
+<li class="fragment">Acknowledge challenges of sustainability</li>
+<li class="fragment">Mandate reproducible results</li>
+<li class="fragment">Provide more fellowships, infrastructure…
+<ul>
+<li class="fragment">SSI: <a href="https://drive.google.com/drive/folders/1U9KdDB3MLDGEkpWpKmHAELdUYDKrB_iy?usp=sharing">Aspiring RSE Leaders Workshop 2019</a></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="policy-conclusion-2" class="slide level2">
+<h2>Policy Conclusion (2)</h2>
+<blockquote>
+<p>Funding bodies should include RSEs in the preparation and execution of funding calls</p>
+</blockquote>
+<p>European Commission Open Science Monitor: <a href="https://ec.europa.eu/info/files/recognising-importance-software-research-research-software-engineers-rses-uk-example_en">Recognising the Importance of Software in Research – Research Software Engineers (RSEs), a UK Example</a></p>
+</section>
+<section id="stack-overflow-developer-survey-2019" class="slide level2">
+<h2><a href="https://insights.stackoverflow.com/survey/2019">Stack Overflow Developer Survey 2019</a></h2>
+<p><em>Developers…</em></p>
+<ul>
+<li><em>…with the <strong>lowest job satisfaction</strong> include academic <strong>researchers</strong>, educators, scientists</em></li>
+<li><em>…who work with data … are high earners for their level of experience, while academic <strong>researchers</strong> and educators are <strong>paid less</strong></em></li>
+<li><em>…working in <strong>academia</strong> and data scientists are <strong>looking for work</strong> at higher proportions</em></li>
+</ul>
+</section>
+<section id="policy-conclusion-3" class="slide level2">
+<h2>Policy Conclusion (3)</h2>
+<blockquote>
+<p>a drastic change in the way researchers are incentivised needs to be implemented</p>
+</blockquote>
+<p>European Commission Open Science Monitor: <a href="https://ec.europa.eu/info/files/recognising-importance-software-research-research-software-engineers-rses-uk-example_en">Recognising the Importance of Software in Research – Research Software Engineers (RSEs), a UK Example</a></p>
+</section>
+<section id="conclusions" class="slide level2">
+<h2>Conclusions</h2>
+<ul>
+<li>Optimistic opinion: we are approaching the end of the beginning for RSE</li>
+<li>Next: Embrace emerging demands and opportunities to truly accelerate research</li>
+<li>Suitably equipped RSEs will play an essential role in digital (i.e. software- and data-driven) science</li>
+</ul>
+<p><img data-src="BetterSoftwareBetterResearch.jpg" class="plain" height="200" /></p>
+</section>
+<section id="questions" class="slide level2">
+<h2>Questions?</h2>
+<p><a href="mailto:m.woodbridge@imperial.ac.uk" class="email">m.woodbridge@imperial.ac.uk</a> <a href="https://mwoodbri.github.io/deRSE19/RSE2.0">mwoodbri.github.io/deRSE19/RSE2.0</a> (CC BY 4.0)</p>
+<p>Many thanks to the RSE Team and Jeremy Cohen at Imperial College for their help with preparing this talk</p>
+<p><img data-src="RCS_IC.png" class="plain" /></p>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
